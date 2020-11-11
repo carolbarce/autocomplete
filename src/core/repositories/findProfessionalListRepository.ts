@@ -1,4 +1,4 @@
-import { ApiClient } from './../infraestructure/apiClient'
+import { ApiClient } from '../infraestructure/apiClient'
 import { mapDtoToProfessionalList } from '../domain/ProfessionalListMapper'
 import { ProfessionalListDTO } from '../domain/ProfessionalListDTO'
 
