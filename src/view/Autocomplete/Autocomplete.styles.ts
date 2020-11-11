@@ -12,3 +12,14 @@ export const Wrapper = styled.div`
 
   color: transparent;
 `
+
+export const Label = styled.label`
+  display: block;
+  
+  width: 100%;
+  margin-bottom: ${rem(8)};
+
+  font-weight: 600;
+
+  color: #2B2B2B;
+`
