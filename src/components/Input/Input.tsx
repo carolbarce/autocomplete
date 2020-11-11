@@ -1,5 +1,5 @@
 import React from 'react';
-import { getProfessionalListService } from '../../core/services/GetProfessionalList'
+import { getProfessionalListService } from '../../core/services/GetProfessionalListService'
 import { InputField, SearchIcon, InputWrapper } from './Input.styles'
 
 let TIME_OUT: number = 0;
