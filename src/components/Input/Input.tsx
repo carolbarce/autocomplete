@@ -1,4 +1,5 @@
 import React from 'react';
+import { getProfessionalListService } from '../../core/services/GetProfessionalList'
 import { InputField, SearchIcon, InputWrapper } from './Input.styles'
 
 let TIME_OUT: number = 0;
@@ -23,6 +24,4 @@ const onTypping = (event: React.ChangeEvent<any>) => {
   TIME_OUT = setTimeout(() => searchProfessionals(inputText), DELAY_TIME);
 }
 
-const searchProfessionals = (searchTerm: string) => {
-  console.log('busquemos profesionales de confianza: ', searchTerm)
-}
+const searchProfessionals = (searchTerm: string) => getProfessionalListService(searchTerm)

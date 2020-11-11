@@ -1,0 +1,1 @@
+export const getProfessionalListService = (searchTerm: string) => console.log("Call to repository with param: ", searchTerm);
