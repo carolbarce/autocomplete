@@ -1,3 +1,3 @@
-import { findProfessionalListRepository } from '../repositories/findProfessionalListRepository'
+import { ProfessionalRepository } from '../repositories/ProfessionalRepository'
 
-export const getProfessionalListService = (searchTerm: string) => findProfessionalListRepository(searchTerm);
+export const getProfessionalListService = (searchTerm: string) => ProfessionalRepository.findProfessionalList(searchTerm);
