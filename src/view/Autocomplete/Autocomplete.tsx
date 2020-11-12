@@ -6,6 +6,7 @@ import { getProfessionalListService } from '../../core/services/GetProfessionalL
 
 export const Autocomplete = () => {
   const [professionalList, setProfessionalList] = useState<string[]>([])
+  const [selectedOption, setSelectedOption] = useState<string>()
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
   const getProfessionalsList = async (searchTerm: string) => {
@@ -19,6 +20,7 @@ export const Autocomplete = () => {
     setIsLoading(true)
     console.log(`Buscar opcion ${option} seleccionada`)
     setProfessionalList([])
+    setSelectedOption(option)
     setTimeout(() => {
       setIsLoading(false)
       console.log('Busqueda terminada');
@@ -29,7 +31,7 @@ export const Autocomplete = () => {
     <>
       <Wrapper>
         <Label> Encuentra profesionales de confianza: </Label>
-        <Input searchProfessionals={getProfessionalsList} loading={isLoading}/>
+        <Input searchProfessionals={getProfessionalsList} value={selectedOption} loading={isLoading}/>
         {professionalList.length > 0 && (
           <DropdownList list={professionalList} onClickItem={selectOption}/>
         )}
