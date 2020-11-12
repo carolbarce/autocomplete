@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import { Wrapper, Label } from './Autocomplete.styles'
+import { DropdownList } from '../../components/DropdownList/DropdownList'
 import { Input } from '../../components/Input/Input'
 import { getProfessionalListService } from '../../core/services/GetProfessionalListService'
 
@@ -9,7 +10,7 @@ export const Autocomplete = () => {
   const getProfessionalsList = async (searchTerm: string) => {
     if (!searchTerm || searchTerm === '') setProfessionalList([])
     
-    const professionals = await getProfessionalListService(searchTerm);
+    const professionals = await getProfessionalListService(searchTerm)
     setProfessionalList(professionals)
   }
 
@@ -17,12 +18,11 @@ export const Autocomplete = () => {
     <>
       <Wrapper>
         <Label> Encuentra profesionales de confianza: </Label>
-        <Input searchProfessionals={getProfessionalsList}/>
-        
+        <Input searchProfessionals={getProfessionalsList} />
+        {professionalList.length > 0 && (
+          <DropdownList list={professionalList} />
+        )}
       </Wrapper>
-      <div>
-      {JSON.stringify( professionalList )}
-      </div>
     </>
-  );
+  )
 }
