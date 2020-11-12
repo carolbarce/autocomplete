@@ -27,9 +27,7 @@ export const Input = ({value, loading, searchProfessionals}: Props) => {
     TIME_OUT = setTimeout(() => searchProfessionals(inputText), DELAY_TIME)
   }
 
-  const onSearch = () => {
-    console.log("Realizar busqueda por dicho parametro ",newValue)
-  }  
+  const onSearch = () => console.log("Realizar busqueda por dicho parametro ",newValue)
 
   return (
     <InputWrapper>
