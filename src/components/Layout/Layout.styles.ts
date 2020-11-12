@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import {rem} from 'polished';
+import {rem} from 'polished'
 
 export const Layout = styled.div`
   width: 100%;

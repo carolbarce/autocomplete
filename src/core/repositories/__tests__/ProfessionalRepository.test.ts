@@ -10,11 +10,11 @@ const ApiResult = [
 
 describe('FindProfessionalList Repository test', () => {
   it('finds a list of preofessinals that contains search term', async () => {
-    const searchTerm = 'pint';
-    const mappedResponse = ["pintle", "pinter", "pintos", "pintar", "pintor"];
-    const apiClient = jest.spyOn(ApiClient, 'get').mockResolvedValue(ApiResult);
+    const searchTerm = 'pint'
+    const mappedResponse = ["pintle", "pinter", "pintos", "pintar", "pintor"]
+    const apiClient = jest.spyOn(ApiClient, 'get').mockResolvedValue(ApiResult)
 
-    expect(await ProfessionalRepository.findProfessionalList(searchTerm)).toEqual(mappedResponse);
-    expect(apiClient).toHaveBeenCalledWith(`/words?sp=pint??&max=${process.env.REACT_APP_MAX_LIST_RESULT}`);
+    expect(await ProfessionalRepository.findProfessionalList(searchTerm)).toEqual(mappedResponse)
+    expect(apiClient).toHaveBeenCalledWith(`/words?sp=pint??&max=${process.env.REACT_APP_MAX_LIST_RESULT}`)
   })
 })

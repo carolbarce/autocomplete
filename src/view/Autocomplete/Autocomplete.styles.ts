@@ -1,5 +1,5 @@
 import styled from 'styled-components/macro'
-import {rem} from 'polished';
+import {rem} from 'polished'
 
 export const Wrapper = styled.div`
   position: relative;
@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   flex-flow: column;
   justify-content: flex-end;
   
-  max-width: ${rem(480)};
+  width: 480px;
   height: ${rem(80)};
 
   color: transparent;

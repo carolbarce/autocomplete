@@ -29,6 +29,6 @@ class AxiosApi implements Api {
 }
 // I've used Datamuse API, a word-finding API. (https://www.datamuse.com/api/)
 // which suits perfectly with the goal of this technical test
-export const apiUrl = "https://api.datamuse.com";
+export const apiUrl = "https://api.datamuse.com"
 
 export const ApiClient = new AxiosApi(apiUrl) as Api
